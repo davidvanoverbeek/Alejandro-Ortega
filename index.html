@@ -13,7 +13,7 @@
                 <span class="brand-mark">AO</span>
                 Alejandro Ortega
             </a>
-            <nav>
+            <nav id="nav">
                 <ul>
                     <li><a href="#home">Inicio</a></li>
                     <li><a href="#coach">Entrenador</a></li>
@@ -24,7 +24,7 @@
             <div class="nav-cta">
                 <a href="#contact" class="btn btn-primary">Reservar sesión</a>
             </div>
-            <button class="burger">☰</button>
+            <button class="burger" id="burger">☰</button>
         </div>
     </header>
  
@@ -39,23 +39,23 @@
                 <a href="#services" class="btn btn-outline">Ver servicios</a>
             </div>
             <div class="hero-stats reveal reveal-up">
-                <div><b>10+</b><span>Años de experiencia</span></div>
-                <div><b>500+</b><span>Clientes transformados</span></div>
-                <div><b>98%</b><span>Tasa de resultados</span></div>
+                <div><b data-count="10" data-suffix="+">0</b><span>Años de experiencia</span></div>
+                <div><b data-count="500" data-suffix="+">0</b><span>Clientes transformados</span></div>
+                <div><b data-count="98" data-suffix="%">0</b><span>Tasa de resultados</span></div>
             </div>
         </div>
     </section>
  
     <section class="coach" id="coach">
-        <div class="container" style="display:grid; grid-template-columns:0.85fr 1.15fr; gap:80px; align-items:center;">
+        <div class="container coach-container">
             <div class="coach-photo reveal reveal-left"></div>
             <div class="coach-text reveal reveal-right">
                 <p class="section-label">El entrenador</p>
                 <h2 class="section-title">EL COACH DETRÁS<br>DEL ESFUERZO</h2>
                 <p>Más de una década ayudando a personas normales a alcanzar una forma física fuera de lo común. Un enfoque directo, basado en evidencia y adaptado a tu cuerpo, tu tiempo y tus objetivos reales — sin fórmulas mágicas.</p>
                 <div class="coach-stats">
-                    <div><b>10+</b><span>Años entrenando</span></div>
-                    <div><b>1250+</b><span>Sesiones impartidas</span></div>
+                    <div><b data-count="10" data-suffix="+">0</b><span>Años entrenando</span></div>
+                    <div><b data-count="1250" data-suffix="+">0</b><span>Sesiones impartidas</span></div>
                 </div>
             </div>
         </div>
@@ -140,6 +140,6 @@
             </div>
         </div>
     </footer>
-    <script src="main/main.js" defer></script>
+    <script src="main/main.js"></script>
 </body>
 </html>
