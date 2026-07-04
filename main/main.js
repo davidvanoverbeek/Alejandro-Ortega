@@ -22,7 +22,6 @@ if (burger && nav) {
 
 }
 
-
 /* ----------- CERRAR MENÚ ---------- */
 
 function closeMenu() {

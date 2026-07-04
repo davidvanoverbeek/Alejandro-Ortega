@@ -27,7 +27,7 @@ body{
   color:var(--text);
   font-family:'Inter',sans-serif;
   -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 body.menu-open {
@@ -64,10 +64,18 @@ h1,h2,h3,
   text-transform:uppercase;
 }
 
-a{text-decoration:none;color:inherit;}
-ul{list-style:none;}
-img{max-width:100%;display:block;}
+a {
+  text-decoration:none;
+  color:inherit;
+}
 
+ul {
+list-style:none;
+}
+
+img{
+  max-width:100%;display:block;
+}
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -168,10 +176,10 @@ nav a:hover {
 }
 
 /* ---------- Burger ---------- */
-
 .burger {
     display: none;
     background: none;
+    border: none;
     color: white;
     font-size: 34px;
     cursor: pointer;
@@ -287,90 +295,46 @@ nav a:hover {
 
 /* ---------- Menu Responsive ---------- */
 
-@media(max-width:860px){
+@media (max-width:860px){
 
     .burger{
-
         display:block;
+        z-index: 100000;
+    }
+
+    .nav-cta{
+        display:none;
     }
 
     nav{
-
         position:fixed;
-
         top:0;
+        right:-300px;
 
-        right:-100%;
-
-        width:280px;
-
+        width:300px;
         height:100vh;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
 
         background:#111;
 
-        flex-direction:column;
+        transition:right .4s ease;
 
-        justify-content:center;
-
-        gap:45px;
-
-        transition:.40s;
-
-        border-left:1px solid #222;
+        z-index:9998;
     }
 
     nav.active{
-
         right:0;
     }
 
     nav ul{
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:30px;
-    }
-
-    nav .btn{
-
         display:flex;
-    }
-
-    .hero{
-
-        text-align:center;
-    }
-
-    .hero-inner{
-
-        margin:auto;
-    }
-
-    .hero-actions{
-
-        justify-content:center;
-    }
-
-    .hero-stats{
-
         flex-direction:column;
-
-        gap:20px;
-
-        text-align:center;
+        gap:30px;
+        padding:0;
     }
-
-}
-
-.nav-cta{display:flex;align-items:center;gap:16px;}
-.burger{display:none;background:none;border:none;color:var(--text);font-size:24px;cursor:pointer;}
-
-@media (max-width:860px){
-  nav{display:none;}
-  .nav-cta .btn{display:none;}
-  .burger{display:block;}
 }
 
 /* ---------- Section basics ---------- */
@@ -417,17 +381,11 @@ section {
   overflow:hidden;
 }
 
-.coach-photo::before {
-  content:'FOTO DEL ENTRENADOR';
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  letter-spacing:.1em;
-  color:var(--text-faint);
-  font-weight:700;
+.coach-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .coach-photo::after {
@@ -465,7 +423,10 @@ section {
 }
 
 @media (max-width:860px){
-  .coach{grid-template-columns:1fr;gap:48px;}
+  .coach {
+    grid-template-columns:1fr;
+    gap:48px;
+  }
 }
 
 /* ---------- Services ---------- */
@@ -708,9 +669,8 @@ footer {
 @media(max-width:900px){
 
     .coach-container{
-
+        display: grid;
         grid-template-columns:1fr;
-
         gap:50px;
     }
 
